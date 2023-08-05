@@ -1,0 +1,35 @@
+Q:by using rwidth in bar chart with bin edges = np.arange(1.5, 12.5+1, 1) will the chart bin values will be equal or in the same interpretation of the histogram in the right subplot?  
+
+The rwidth parameter in a bar chart determines the proportion of the bin widths that will be filled by each bar. In the example you mentioned, with rwidth set to 0.7, the bars will take up 70% of the space allocated by each bin, with 30% of the space left empty.
+
+When using rwidth in a bar chart with bin edges defined as np.arange(1.5, 12.5+1, 1), the resulting chart will have bars with gaps between them. This is because the bin edges are not connected, and each bar represents a separate bin.
+
+In contrast, the histogram in the right subplot of the example you provided has connected bins. The bin edges are defined as np.arange(1.5, 12.5+1, 1), but the bars in the histogram are contiguous, without any gaps between them.
+
+So, the bar chart with rwidth will not have the same interpretation as the histogram in the right subplot. The bar chart will show individual bars with gaps, while the histogram will show contiguous bars representing connected bins.
+
+I hope this clarifies the difference between the bar chart with rwidth and the histogram in the right subplot. Let me know if you have any further questions!
+
+Q:ok let me clarify what I mean, I mean will the same observations valued will be in range of the connected bins in the histogram chart are they are in the not connected bin edges in the bar chart?
+
+I apologize for the confusion. In the bar chart with not connected bin edges, the observations with values falling on the bin edges will not be included in the corresponding bins. Instead, they will be placed in the adjacent bin to the right.
+
+For example, let's say you have a bin edge range of [1.5, 2.5, 3.5, 4.5]. If you have an observation with a value of 2, it will be placed in the second bin (2.5-3.5), not the first bin (1.5-2.5). This is because the bin edges are not inclusive of the observation values.
+
+On the other hand, in the histogram with connected bins, the observations falling on the bin edges are included in the corresponding bins. So, if you have an observation with a value of 2, it will be placed in the first bin (1.5-2.5) in the histogram.
+
+In summary, the same observations with values falling on the bin edges will be included in the range of connected bins in the histogram, but they will be placed in the adjacent bin to the right in the bar chart with not connected bin edges.
+
+I hope this clarifies your question. Let me know if you have any further doubts!
+
+Q:on great, will the same thing happen comparing the left histogram to the bar chart?
+
+Yes, the same principle applies when comparing the left histogram to the bar chart. In both cases, if you have observations with values falling on the bin edges, the interpretation will differ.
+
+In the left histogram, where the bin edges are falling on the observation values, the observations will be included in the corresponding bins. For example, if you have a bin edge range of [1, 2, 3, 4], and an observation with a value of 2, it will be placed in the second bin (2-3) in the histogram.
+
+On the other hand, in the bar chart, where the bin edges are in between the observation values, the observations will be placed in the adjacent bin to the right. Using the same example, if you have a bin edge range of [1.5, 2.5, 3.5, 4.5], the observation with a value of 2 will be placed in the third bin (2.5-3.5) in the bar chart.
+
+So, in summary, the left histogram includes observations with values falling on the bin edges in the corresponding bins, while the bar chart places those observations in the adjacent bin to the right.
+
+I hope this clarifies the difference between the left histogram and the bar chart. Let me know if you have any further questions!
